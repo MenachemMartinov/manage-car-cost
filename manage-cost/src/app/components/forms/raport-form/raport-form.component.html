@@ -1,0 +1,19 @@
+<mat-form-field>
+  <mat-label>{{ "RAPORT_TYPE" | translate }}</mat-label>
+  <mat-select>
+    <mat-option
+      *ngFor="let m of raportTypes"
+      [value]="m"
+      >{{ m }}</mat-option
+    >
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Input</mat-label>
+  <input matInput />
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Textarea</mat-label>
+  <textarea matInput></textarea>
+</mat-form-field>
