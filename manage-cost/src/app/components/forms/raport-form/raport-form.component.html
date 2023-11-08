@@ -1,11 +1,11 @@
 <mat-form-field>
   <mat-label>{{ "RAPORT_TYPE" | translate }}</mat-label>
   <mat-select>
-    <mat-option
-      *ngFor="let m of raportTypes"
-      [value]="m"
-      >{{ m }}</mat-option
-    >
+    @for (raportType of []; track raportType){
+    <mat-option [value]="raportType">{{ raportType }} </mat-option>
+    } @empty {
+    <mat-option disabeld> There are no items. </mat-option>
+    }
   </mat-select>
 </mat-form-field>
 <mat-form-field>
