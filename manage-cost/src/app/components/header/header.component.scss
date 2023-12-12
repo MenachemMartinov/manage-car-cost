@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  position: fixed;
+  inset-block-start: 0;
+  height: 50px;
+  width: 100%;
+  background-color: aquamarine;
+  z-index: 10000;
+
+  a {
+    img {
+      height: 100%;
+    }
+  }
+}

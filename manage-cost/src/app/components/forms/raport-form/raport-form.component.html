@@ -1,19 +1,37 @@
-<mat-form-field>
-  <mat-label>{{ "RAPORT_TYPE" | translate }}</mat-label>
-  <mat-select>
-    @for (raportType of []; track raportType){
-    <mat-option [value]="raportType">{{ raportType }} </mat-option>
-    } @empty {
-    <mat-option disabeld> There are no items. </mat-option>
-    }
-  </mat-select>
-</mat-form-field>
-<mat-form-field>
-  <mat-label>Input</mat-label>
-  <input matInput />
-</mat-form-field>
+<form [formGroup]="raportFormGroup">
+  <mat-form-field>
+    <mat-label>{{ "RAPORT_TYPE" | translate }}</mat-label>
+    <mat-select formControlName="formType">
+      @for (raportType of raportTypes; track raportType){
+      <mat-option [value]="raportType">{{ raportType }} </mat-option>
+      } @empty {
+      <mat-option disabeld> There are no items. </mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
 
-<mat-form-field>
-  <mat-label>Textarea</mat-label>
-  <textarea matInput></textarea>
-</mat-form-field>
+  <mat-form-field>
+    <mat-label>amount</mat-label>
+    <input matInput formControlName="amount" type="number" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Textarea</mat-label>
+    <textarea matInput formControlName="note"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>event name</mat-label>
+    <input matInput formControlName="eventName" type="text" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>tip</mat-label>
+    <input matInput formControlName="tip" type="number" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>tip to</mat-label>
+    <input matInput formControlName="tipTo" type="text" />
+  </mat-form-field>
+</form>

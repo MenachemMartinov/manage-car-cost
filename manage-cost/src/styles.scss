@@ -9,5 +9,16 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  // direction: rtl !important;
+  direction: rtl !important;
+}
+
+// modify angular material styles
+.mat-mdc-form-field {
+  text-align: right !important;
+}
+.mat-mdc-option {
+  justify-content: space-between !important;
+  .mdc-list-item__primary-text {
+    margin-inline: 0 !important;
+  }
 }
