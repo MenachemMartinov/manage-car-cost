@@ -1,1 +1,4 @@
-<app-raport-form></app-raport-form>
+<app-report-form
+  [reportFormData]="formData"
+  (updateDetailsEmit)="updateData($event)"
+></app-report-form>

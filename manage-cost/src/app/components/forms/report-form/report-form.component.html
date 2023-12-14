@@ -1,9 +1,9 @@
-<form [formGroup]="raportFormGroup">
+<form [formGroup]="reportFormGroup">
   <mat-form-field>
-    <mat-label>{{ "RAPORT_TYPE" | translate }}</mat-label>
+    <mat-label>{{ "report_TYPE" | translate }}</mat-label>
     <mat-select formControlName="formType">
-      @for (raportType of raportTypes; track raportType){
-      <mat-option [value]="raportType">{{ raportType }} </mat-option>
+      @for (reportType of reportTypes; track reportType){
+      <mat-option [value]="reportType">{{ reportType }} </mat-option>
       } @empty {
       <mat-option disabeld> There are no items. </mat-option>
       }
